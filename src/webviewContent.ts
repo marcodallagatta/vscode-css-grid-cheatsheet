@@ -17,15 +17,15 @@ export function getWebviewContent(
 		<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src ${cspSource}; style-src ${cspSource} '${webviewUiToolkitHash}'; img-src ${cspSource};">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>CSS Flexbox Cheatsheet</title>
-		
+		<title>CSS Grid Cheatsheet</title>
+
 		<link rel="stylesheet" href="${stylePath}/custom.css">
 	</head>
 
 	<body>
 		<main>
 			<div class="container">
-				<h1>CSS Flexbox Cheatsheet</h1>
+				<h1>CSS Grid Cheatsheet</h1>
 
 				<h2>Settings</h2>
 
@@ -69,7 +69,7 @@ export function getWebviewContent(
 
 				<div class="group">
 					<h3>Flex direction</h3>
-				
+
 					<div class="row">
 						<div>
 							<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction" target="_blank" rel="noopener">flex-direction</a>: <span class="default">row</span>;
@@ -100,7 +100,7 @@ export function getWebviewContent(
 							<code class="js-directionality-code">dir="ltr"</code>
 						</div>
 
-						<div class="flexbox-container js-flexbox-container" dir="ltr">
+						<div class="grid-container js-grid-container" dir="ltr">
 							<div>One</div>
 							<div>Two</div>
 							<div>Three</div>
@@ -139,7 +139,7 @@ export function getWebviewContent(
 							<code class="js-directionality-code">dir="ltr"</code>
 						</div>
 
-						<div class="flexbox-container js-flexbox-container" dir="ltr">
+						<div class="grid-container js-grid-container" dir="ltr">
 							<div>One</div>
 							<div>Two</div>
 							<div>Three</div>
@@ -200,7 +200,7 @@ export function getWebviewContent(
 							<code class="js-directionality-code">dir="ltr"</code>
 						</div>
 
-						<div class="flexbox-container js-flexbox-container" dir="ltr">
+						<div class="grid-container js-grid-container" dir="ltr">
 							<div>One</div>
 							<div>Two</div>
 							<div>Three</div>
@@ -251,7 +251,7 @@ export function getWebviewContent(
 							<code class="js-directionality-code">dir="ltr"</code>
 						</div>
 
-						<div class="flexbox-container js-flexbox-container" dir="ltr">
+						<div class="grid-container js-grid-container" dir="ltr">
 							<div>One</div>
 							<div>Two</div>
 							<div>Three</div>
@@ -308,7 +308,7 @@ export function getWebviewContent(
 							<code class="js-directionality-code">dir="ltr"</code>
 						</div>
 
-						<div class="flexbox-container js-flexbox-container" dir="ltr">
+						<div class="grid-container js-grid-container" dir="ltr">
 							<div>One</div>
 							<div>Two</div>
 							<div>Three</div>
@@ -370,7 +370,7 @@ export function getWebviewContent(
 							<code class="js-directionality-code">dir="ltr"</code>
 						</div>
 
-						<div class="flexbox-container js-flexbox-container" dir="ltr">
+						<div class="grid-container js-grid-container" dir="ltr">
 							<div>One</div>
 							<div>Two</div>
 							<div>Three</div>
@@ -452,7 +452,7 @@ export function getWebviewContent(
 							<code class="js-directionality-code">dir="ltr"</code>
 						</div>
 
-						<div class="flexbox-container js-flexbox-container" dir="ltr">
+						<div class="grid-container js-grid-container" dir="ltr">
 							<div>One</div>
 							<div>Two</div>
 							<div>Three</div>
@@ -472,7 +472,7 @@ export function getWebviewContent(
 					<li><a href="https://flexboxfroggy.com/" target="_blank" rel="noopener">Flexbox Froggy</a></li>
 					<li><a href="https://flexboxzombies.com/p/flexbox-zombies" target="_blank" rel="noopener">Flexbox Zombies</a></li>
 					<li><a href="https://codingfantasy.com/games/flexboxadventure" target="_blank" rel="noopener">Flex Box Adventure</a></li>
-					<li><a href="https://www.flexboxpatterns.com/" target="_blank" rel="noopener">Flexbox Patterns</a></li>
+					<li><a href="https://www.gridPatterns.com/" target="_blank" rel="noopener">Flexbox Patterns</a></li>
 				</ul>
 			</div>
 		</main>

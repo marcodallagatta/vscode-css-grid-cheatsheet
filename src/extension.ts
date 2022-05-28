@@ -3,7 +3,7 @@ import { join } from 'path';
 import { lstatSync } from 'fs';
 
 import { getWebviewContent } from './webviewContent';
-import * as flexboxPatterns from './flexboxPatterns';
+import * as gridPatterns from './gridPatterns';
 
 const supportedFiles = ['css', 'less', 'sass', 'scss'];
 
@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
   }
 
   const disposableCommand = vscode.commands.registerCommand(
-    'flexbox.cheatsheet',
+    'grid.cheatsheet',
     () => {
       const styleRoot = vscode.Uri.file(join(context.extensionPath, 'style'));
       const imagesRoot = vscode.Uri.file(join(context.extensionPath, 'images'));
@@ -46,8 +46,8 @@ export function activate(context: vscode.ExtensionContext) {
 
       // Create and show a new webview
       const panel = vscode.window.createWebviewPanel(
-        'flexboxCheatsheet',
-        'CSS Flexbox Cheatsheet',
+        'gridCheatsheet',
+        'CSS Grid Cheatsheet',
         vscode.ViewColumn.Beside,
         {
           localResourceRoots: [styleRoot, imagesRoot, scriptRoot],
@@ -132,7 +132,7 @@ function decorate(editor: vscode.TextEditor) {
   for (let line = 0; line < sourceCodeArr.length; line++) {
     const sourceCode = sourceCodeArr[line];
 
-    let matches = matchAll(flexboxPatterns.displayFlexPattern, sourceCode);
+    let matches = matchAll(gridPatterns.displayFlexPattern, sourceCode);
 
     if (matches.length > 0) {
       matches.forEach((match) => {
@@ -174,17 +174,17 @@ function buildMarkdownString(
 ): vscode.MarkdownString[] {
   let markdownString: vscode.MarkdownString[] = [];
 
-  const commandUri = vscode.Uri.parse('command:flexbox.cheatsheet');
-  const flexboxCommand = new vscode.MarkdownString(
-    `[Open CSS Flexbox Cheatsheet](${commandUri} "Open CSS Flexbox Cheatsheet")`
+  const commandUri = vscode.Uri.parse('command:grid.cheatsheet');
+  const gridCommand = new vscode.MarkdownString(
+    `[Open CSS Grid Cheatsheet](${commandUri} "Open CSS Grid Cheatsheet")`
   );
 
   // To enable command URIs in Markdown content, you must set the `isTrusted` flag.
   // When creating trusted Markdown string, make sure to properly sanitize all the
   // input content so that only expected command URIs can be executed
-  flexboxCommand.isTrusted = true;
+  gridCommand.isTrusted = true;
 
-  markdownString.push(flexboxCommand);
+  markdownString.push(gridCommand);
 
   const filePath = join(context.extensionPath, 'images', `${property}.svg`);
   const isFile = doesFileExist(filePath);
@@ -207,7 +207,7 @@ function getPropertyRangeAtPosition(
 ) {
   let propertyRange: vscode.Range | undefined;
 
-  for (const pattern of flexboxPatterns.allFlexboxPatterns) {
+  for (const pattern of gridPatterns.allgridPatterns) {
     const range = doc.getWordRangeAtPosition(pos, pattern);
 
     if (range) {
@@ -232,11 +232,11 @@ function doesFileExist(filePath: string): boolean {
 function getPropertyAtRange(doc: vscode.TextDocument, range: vscode.Range) {
   let property = doc.getText(range);
 
-  if (flexboxPatterns.flexGrowBiggerThanZero.test(property)) {
+  if (gridPatterns.flexGrowBiggerThanZero.test(property)) {
     return 'flex-grow-1';
-  } else if (flexboxPatterns.flexShrinkBiggerThanZero.test(property)) {
+  } else if (gridPatterns.flexShrinkBiggerThanZero.test(property)) {
     return 'flex-shrink-1';
-  } else if (flexboxPatterns.order.test(property)) {
+  } else if (gridPatterns.order.test(property)) {
     return 'order';
   }
 

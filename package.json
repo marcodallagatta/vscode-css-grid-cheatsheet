@@ -1,8 +1,8 @@
 {
   "name": "css-grid-cheatsheet",
   "displayName": "CSS Grid Cheatsheet",
-  "description": "Open a CSS grid cheatsheet directly in VS Code.",
-  "version": "0.1",
+  "description": "Open a grid cheatsheet directly in VS Code.",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.58.0"
   },
@@ -17,8 +17,8 @@
     "keybindings": [
       {
         "command": "grid.cheatsheet",
-        "key": "Ctrl+K G",
-        "mac": "Cmd+K G"
+        "key": "Ctrl+K K",
+        "mac": "Cmd+K K"
       }
     ],
     "commands": [

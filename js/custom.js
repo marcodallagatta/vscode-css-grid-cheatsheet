@@ -60,11 +60,11 @@
     selectedButton.classList.add('selected');
 
     const selectedButtonDataClass = selectedButton.dataset.jsClass;
-    const flexboxContainer =
-      playgroundContainer.querySelector('.flexbox-container');
+    const gridContainer =
+      playgroundContainer.querySelector('.grid-container');
 
-    flexboxContainer.className = 'flexbox-container js-flexbox-container';
-    flexboxContainer.classList.add(selectedButtonDataClass);
+    gridContainer.className = 'grid-container js-grid-container';
+    gridContainer.classList.add(selectedButtonDataClass);
   }
 
   /**
@@ -94,7 +94,7 @@
 
     const selectedButtonDataClass = selectedButton.dataset.jsClass;
     const secondElement = playgroundContainer.querySelector(
-      '.flexbox-container > div:nth-child(2)'
+      '.grid-container > div:nth-child(2)'
     );
 
     secondElement.className = '';
@@ -108,10 +108,10 @@
     /**
      * @type {NodeListOf<HTMLDivElement>}
      */
-    const flexboxContainers = document.querySelectorAll(
-      '.js-flexbox-container'
+    const gridContainers = document.querySelectorAll(
+      '.js-grid-container'
     );
-    flexboxContainers.forEach(
+    gridContainers.forEach(
       (element) => (element.dir = selectedDirectionality)
     );
 

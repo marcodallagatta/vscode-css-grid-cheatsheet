@@ -29,12 +29,12 @@ const flexWrapAndDirectionPattern = /flex-(wrap|direction):\s*[\w-]+;?/g;
 const flexGrowAndShrinkPattern = /flex-(grow|shrink):\s*\d+;?/g;
 
 /**
- * Matches `flex-grow` values bigger than 0 
+ * Matches `flex-grow` values bigger than 0
  */
 export const flexGrowBiggerThanZero = /flex-grow:\s*(?!0)\d+;?/;
 
 /**
- * Matches `flex-shrink` values bigger than 0 
+ * Matches `flex-shrink` values bigger than 0
  */
 export const flexShrinkBiggerThanZero = /flex-shrink:\s*(?!0)\d+;?/;
 
@@ -43,7 +43,7 @@ export const flexShrinkBiggerThanZero = /flex-shrink:\s*(?!0)\d+;?/;
  */
 export const order = /order:\s*?-?\d+;?/g;
 
-export const allFlexboxPatterns = [
+export const allgridPatterns = [
   displayFlexPattern,
   displayInlineFlexPattern,
   alignPattern,
